@@ -32,6 +32,11 @@ function addMonster(e) {
     monsterObj.name = monsterForm.name.value
     monsterObj.age = monsterForm.age.value
     monsterObj.description = monsterForm.description.value
+
+    monsterForm.name.value = ''
+    monsterForm.age.value = ''
+    monsterForm.description.value = ''
+    
     
     fetch('http://localhost:3000/monsters', {
         method: "POST", 
